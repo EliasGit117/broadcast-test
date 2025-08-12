@@ -19,7 +19,6 @@ export const CollaborativeSessionProvider = ({ children }: CollaborativeSessionP
   );
 };
 
-// Custom hook for easier context consumption
 export const useCollaborativeSessionContext = (): CollaborativeSessionContextValue => {
   const context = useContext(CollaborativeSessionContext);
   if (!context) {

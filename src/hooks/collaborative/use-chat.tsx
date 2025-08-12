@@ -56,7 +56,6 @@ export const useChat = () => {
     localStorage.removeItem(localStorageKey);
   }, [postMessage]);
 
-  // Handle incoming broadcast messages
   useEffect(() => {
     const lastMsg = broadcastMessages.at(-1);
     if (!lastMsg || lastMsg.source === userId) return;
@@ -116,7 +115,6 @@ export const useChat = () => {
     }
   }, [broadcastMessages, userId]);
 
-  // Periodically clean up expired messages
   useEffect(() => {
     const interval = setInterval(() => {
       const now = Date.now();
